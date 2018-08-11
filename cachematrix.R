@@ -27,14 +27,13 @@ makeCacheMatrix <- function(x = matrix())
   }
   ## creating this list is required to refer to the functions.
   list(setMatrix = setMatrix, getMatrix = getMatrix,
-       setXInv = setXInv,
-       getXInv = getXInv)
+       setXInv = setXInv, getXInv = getXInv)
 }
 
 
-## This method is used to calculate inverse of the matrix created by makeCacheMatrix.
+## cacheSolve method is used to calculate inverse of the matrix created by makeCacheMatrix.
 ## If the inverse is already caluclated and the matrix has not changed, this method will
-## getch the valuw from the cache instead of calculating the inverse again.
+## get the value from the cache instead of calculating the inverse again.
 
 cacheSolve <- function(x, ...) 
 {
